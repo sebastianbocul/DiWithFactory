@@ -1,10 +1,13 @@
 package com.sebix.diwithfactory.Operators;
 
 public class OperatorData {
-    public int a ,b;
+    public int a,b;
 
-    public OperatorData(int a, int b) {
+    public void setA(int a) {
         this.a = a;
+    }
+
+    public void setB(int b) {
         this.b = b;
     }
 }

@@ -12,6 +12,6 @@ public class OperatorMultiply implements Operator {
 
     @Override
     public int getResult() {
-        return operatorData.a + operatorData.b;
+        return operatorData.a * operatorData.b;
     }
 }

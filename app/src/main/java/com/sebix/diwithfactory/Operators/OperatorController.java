@@ -1,14 +1,14 @@
 package com.sebix.diwithfactory.Operators;
 
 public class OperatorController {
-    OperatorData operatorData;
+    OperatorFactory operatorFactory;
 
-    public OperatorController(int a , int b) {
-        this.operatorData = new OperatorData(a,b);
+    public OperatorController(OperatorFactory operatorFactory) {
+        this.operatorFactory = operatorFactory;
     }
 
-    public int createOperatorGetResult(){
-        Operator operator = OperatorFactory.getOperator("add",operatorData);
+    public int createAndGetOpResult(String opName){
+        Operator operator =  operatorFactory.getOperator(opName);
         return operator.getResult();
     }
 }

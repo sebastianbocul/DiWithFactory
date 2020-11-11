@@ -4,20 +4,28 @@ import com.sebix.diwithfactory.Operators.items.OperatorAdd;
 import com.sebix.diwithfactory.Operators.items.OperatorMultiply;
 import com.sebix.diwithfactory.Operators.items.OperatorSubtract;
 
-class OperatorFactory {
+public class OperatorFactory {
+    OperatorAdd operatorAdd;
+    OperatorSubtract operatorSubtract;
+    OperatorMultiply operatorMultiply;
 
-    public static Operator getOperator(String opName,OperatorData operatorData){
+    public OperatorFactory(OperatorAdd operatorAdd, OperatorSubtract operatorSubtract, OperatorMultiply operatorMultiply) {
+        this.operatorAdd = operatorAdd;
+        this.operatorSubtract = operatorSubtract;
+        this.operatorMultiply = operatorMultiply;
+    }
+
+    public Operator getOperator(String opName){
         Operator operator = null;
-
         switch (opName){
             case "add":
-                operator = new OperatorAdd(operatorData);
+                operator = operatorAdd;
                 break;
             case "sub":
-                operator = new OperatorSubtract(operatorData);
+                operator = operatorSubtract;
                 break;
-            case "multi":
-                operator = new OperatorMultiply(operatorData);
+            case "multiply":
+                operator = operatorMultiply;
                 break;
         }
 
