@@ -1,4 +1,10 @@
 package com.sebix.diwithfactory.Operators;
 
-class OperatorData {
+public class OperatorData {
+    public int a ,b;
+
+    public OperatorData(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
 }
